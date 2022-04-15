@@ -1,0 +1,1 @@
+export { setIsInitialize } from './setIsInitialize';

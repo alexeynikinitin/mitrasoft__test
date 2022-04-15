@@ -1,0 +1,3 @@
+export enum APP_ACTIONS_TYPES {
+  SET_IS_INITIALIZE = 'appReducer/SET_IS_INITIALIZE',
+}
