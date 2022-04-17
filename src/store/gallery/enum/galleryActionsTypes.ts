@@ -1,0 +1,3 @@
+export enum GALLERY_ACTIONS_TYPES {
+  SET_CATEGORY_DATA = 'categoryReducer/SET_CATEGORY_DATA',
+}

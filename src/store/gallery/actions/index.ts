@@ -1,0 +1,1 @@
+export { setCategoryData } from './setCategoryData';

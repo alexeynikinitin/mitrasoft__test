@@ -2,7 +2,7 @@ import { APP_ACTIONS_TYPES } from 'store/app/enum/appActionsTypes';
 import { AppActionCreatorsType } from 'store/app/types/AppActionCreatorsType';
 import { AppStateType } from 'store/app/types/AppStateType';
 
-const initialAuthState = {
+const initialAuthState: AppStateType = {
   isInitialized: false,
 };
 
