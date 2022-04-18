@@ -1,15 +1,24 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 
 import { Category } from 'components/mitrasoftGallery/Gallery/category/Category';
+import { getAllGalleryPhoto } from 'store/gallery/actions/getAllGalleryPhoto';
 import { selectCategories } from 'store/gallery/selectors/index';
-import { useAppSelector } from 'store/store';
+import { useAppDispatch } from 'utils/useAppDispatch';
+import { useAppSelector } from 'utils/useAppSelector';
 
 export const Gallery: FC<GalleryType> = () => {
   const categories = useAppSelector(selectCategories);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getAllGalleryPhoto());
+  }, []);
+
   return (
     <div>
-      {categories.map(category => (
-        <Category key={category.id} category={category} />
+      {categories.map((category, index) => (
+        <Category key={category.id} category={category} categoryIndex={index} />
       ))}
     </div>
   );

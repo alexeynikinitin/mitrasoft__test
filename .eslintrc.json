@@ -31,6 +31,7 @@
     "no-unused-vars": "off",
     "no-magic-numbers": "off",
     "default-param-last": "off",
+    "no-case-declarations": 0,
     "no-use-before-define": "off",
     "no-multiple-empty-lines": [
       "error",
@@ -51,15 +52,15 @@
         "ignoreNumericLiteralTypes": true
       }
     ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
+    //    "@typescript-eslint/no-use-before-define": [
+    //      "error"
+    //    ],
+    //    "@typescript-eslint/explicit-function-return-type": [
+    //      "error",
+    //      {
+    //        "allowExpressions": true
+    //      }
+    //    ],
     "prettier/prettier": "error",
     "react/prop-types": 0,
     "react/display-name": "off",
@@ -117,7 +118,9 @@
         "optionalDependencies": true,
         "peerDependencies": true
       }
-    ]
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0
   },
   "settings": {
     "import/resolver": {

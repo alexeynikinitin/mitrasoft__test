@@ -3,5 +3,6 @@ import { PhotoType } from 'store/gallery/types/PhotoType';
 
 export type GalleryStateType = {
   categories: CategoryStateType[];
-  categoryData: PhotoType[] | null;
+  allCategoryPhoto: PhotoType[];
+  selectedPhoto: PhotoType | null;
 };

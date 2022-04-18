@@ -1,5 +1,7 @@
+import { PhotoType } from 'store/gallery/types/PhotoType';
+
 export type CategoryStateType = {
   id: string;
   name: string;
-  photo: string;
+  photos: PhotoType[] | null;
 };
