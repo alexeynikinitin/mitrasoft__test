@@ -1,4 +1,4 @@
-import { PhotoType } from 'store/gallery/types/PhotoType';
+import { PhotoType } from 'store/gallery/types';
 
 export type CategoryStateType = {
   id: string;

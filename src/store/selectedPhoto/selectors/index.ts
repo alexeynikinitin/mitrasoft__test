@@ -1,0 +1,1 @@
+export { selectSelectedPhoto } from './selectSelectedPhoto';

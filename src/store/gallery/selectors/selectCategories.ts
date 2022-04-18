@@ -1,4 +1,4 @@
-import { CategoryStateType } from 'store/gallery/types/CategoryStateType';
+import { CategoryStateType } from 'store/gallery/types';
 import { RootStateType } from 'store/store';
 
 export const selectCategories = (state: RootStateType): CategoryStateType[] =>

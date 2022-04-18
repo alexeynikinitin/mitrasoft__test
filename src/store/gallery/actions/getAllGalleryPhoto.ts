@@ -1,4 +1,4 @@
-import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum/galleryActionsTypes';
+import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum';
 
 export const getAllGalleryPhoto = () =>
   ({

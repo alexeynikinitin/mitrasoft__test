@@ -2,8 +2,8 @@ import React, { FC, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
-import { getPhoto } from 'store/gallery/actions/getPhoto';
-import { selectSelectedPhoto } from 'store/gallery/selectors/selectSelectedPhoto';
+import { getPhoto } from 'store/selectedPhoto/actions';
+import { selectSelectedPhoto } from 'store/selectedPhoto/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
 import { useAppSelector } from 'utils/useAppSelector';
 

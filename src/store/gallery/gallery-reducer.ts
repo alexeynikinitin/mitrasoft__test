@@ -1,7 +1,5 @@
-import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum/galleryActionsTypes';
-import { MAGIC_NUMBERS } from 'store/gallery/enum/magicNumbers';
-import { GalleryActionCreatorsType } from 'store/gallery/types/GalleryActionCreatorsType';
-import { GalleryStateType } from 'store/gallery/types/GalleryStateType';
+import { GALLERY_ACTIONS_TYPES, MAGIC_NUMBERS } from 'store/gallery/enum';
+import { GalleryActionCreatorsType, GalleryStateType } from 'store/gallery/types';
 
 const initialGalleryState: GalleryStateType = {
   categories: [
@@ -27,7 +25,6 @@ const initialGalleryState: GalleryStateType = {
     },
   ],
   allCategoryPhoto: [],
-  selectedPhoto: null,
 };
 
 export const galleryReducer = (
@@ -53,11 +50,6 @@ export const galleryReducer = (
               }
             : category,
         ),
-      };
-    case GALLERY_ACTIONS_TYPES.SET_SELECTED_PHOTO:
-      return {
-        ...state,
-        selectedPhoto: action.payload.selectPhoto,
       };
     default:
       return state;

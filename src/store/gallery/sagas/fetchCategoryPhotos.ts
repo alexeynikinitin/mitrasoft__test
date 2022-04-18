@@ -1,9 +1,9 @@
 import { call, put } from 'redux-saga/effects';
 
-import { gallery } from 'services/api/gallery';
-import { setAllGalleryPhoto } from 'store/gallery/actions/setAllGalleryPhoto';
-import { MAGIC_NUMBERS } from 'store/gallery/enum/magicNumbers';
-import { PhotoType } from 'store/gallery/types/PhotoType';
+import { gallery } from 'services/api';
+import { setAllGalleryPhoto } from 'store/gallery/actions';
+import { MAGIC_NUMBERS } from 'store/gallery/enum';
+import { PhotoType } from 'store/gallery/types';
 
 export function* fetchCategoryPhotos() {
   // @ts-ignore

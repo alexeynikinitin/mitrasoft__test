@@ -2,8 +2,8 @@ import React, { FC, memo, useEffect } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import { setCategoryPhoto } from 'store/gallery/actions/setCategoryPhoto';
-import { CategoryStateType } from 'store/gallery/types/CategoryStateType';
+import { setCategoryPhoto } from 'store/gallery/actions';
+import { CategoryStateType } from 'store/gallery/types';
 import { useAppDispatch } from 'utils/useAppDispatch';
 
 export const Category: FC<CategoryType> = memo(({ categoryIndex, category }) => {

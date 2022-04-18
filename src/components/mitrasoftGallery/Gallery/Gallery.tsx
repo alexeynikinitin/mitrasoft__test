@@ -1,8 +1,8 @@
 import React, { FC, useEffect } from 'react';
 
 import { Category } from 'components/mitrasoftGallery/Gallery/category/Category';
-import { getAllGalleryPhoto } from 'store/gallery/actions/getAllGalleryPhoto';
-import { selectCategories } from 'store/gallery/selectors/index';
+import { getAllGalleryPhoto } from 'store/gallery/actions';
+import { selectCategories } from 'store/gallery/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
 import { useAppSelector } from 'utils/useAppSelector';
 

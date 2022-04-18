@@ -1,5 +1,5 @@
-import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum/galleryActionsTypes';
-import { PhotoType } from 'store/gallery/types/PhotoType';
+import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum';
+import { PhotoType } from 'store/gallery/types';
 
 export const setAllGalleryPhoto = (allCategoryPhoto: PhotoType[]) =>
   ({
