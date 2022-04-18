@@ -4,9 +4,8 @@ import './Footer.css';
 import { Col, Row } from 'react-bootstrap';
 
 export const Footer: FC<FooterType> = () => (
-  <Row className="footer align-items-center justify-content-around p-3">
-    <Col>Created by Alexey Nikitin</Col>
-    <Col>2022</Col>
+  <Row className="footer align-items-center m-0">
+    <Col className="d-flex justify-content-center">Created by Alexey Nikitin, 2022</Col>
   </Row>
 );
 

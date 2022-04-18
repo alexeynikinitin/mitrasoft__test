@@ -6,7 +6,6 @@ import { CategoryCard } from 'components/mitrasoftGallery/gallery/category/categ
 import { setCategoryPhoto } from 'store/gallery/actions';
 import { CategoryStateType } from 'store/gallery/types';
 import { useAppDispatch } from 'utils/useAppDispatch';
-import './Category.css';
 
 export const Category: FC<CategoryType> = memo(({ categoryIndex, category }) => {
   const { photos } = category;

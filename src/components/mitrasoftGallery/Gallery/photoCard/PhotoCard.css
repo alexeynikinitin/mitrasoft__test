@@ -1,0 +1,27 @@
+.photoCard {
+    font-size: 40px;
+}
+
+.photoCard__goToBack {
+    font-size: 30px;
+}
+
+.photoCard__goToBack a {
+    text-decoration: none;
+    color: #57421c;
+}
+
+.photoCard__goToBack a:hover {
+    color: #fff;
+}
+
+.photoCard__title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.photoCard__img {
+    width: 300px;
+    border: 2px solid #282c34;
+    border-radius: 20px;
+}

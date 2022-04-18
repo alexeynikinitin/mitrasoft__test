@@ -9,7 +9,7 @@ export const CategoryCard: FC<CategoryCardType> = memo(({ id, url, title }) => (
   <Col key={id} xs={2} className="photoCategory mb-3">
     <img className="photoCategory__img" key={id} src={url} alt={title} />
     <NavLink to={`/gallery/${id}`}>
-      <Button className="photoCategory__button" variant="primary" size="lg">
+      <Button className="photoCategory__button" variant="primary" size="sm">
         Подробнее
       </Button>
     </NavLink>

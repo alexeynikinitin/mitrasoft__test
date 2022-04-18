@@ -6,7 +6,7 @@ import { Col, Row } from 'react-bootstrap';
 import './Header.css';
 
 export const Header: FC<HeaderType> = () => (
-  <Row className="p-3 header justify-content-between">
+  <Row className="p-3 header justify-content-between m-0">
     <Col xs={1} className="d-flex align-items-center">
       <div className="logo" />
     </Col>

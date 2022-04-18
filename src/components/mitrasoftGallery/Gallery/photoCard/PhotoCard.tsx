@@ -1,11 +1,13 @@
 import React, { FC, useEffect } from 'react';
 
+import { Col, Container, Row } from 'react-bootstrap';
 import { NavLink, useParams } from 'react-router-dom';
 
 import { getPhoto } from 'store/selectedPhoto/actions';
 import { selectSelectedPhoto } from 'store/selectedPhoto/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
 import { useAppSelector } from 'utils/useAppSelector';
+import './PhotoCard.css';
 
 export const PhotoCard: FC<PhotoCardType> = () => {
   const { photoId } = useParams<string>();
@@ -16,14 +18,35 @@ export const PhotoCard: FC<PhotoCardType> = () => {
   }, [photoId]);
 
   return (
-    <div>
-      <NavLink to="/gallery">Назад</NavLink>
-      <div>{selectedPhoto && selectedPhoto.title}</div>
-      <div>{selectedPhoto && selectedPhoto.albumId}</div>
-      <div>{selectedPhoto && selectedPhoto.id}</div>
-      <div>{selectedPhoto && selectedPhoto.url}</div>
-      <div>{selectedPhoto && selectedPhoto.thumbnailUrl}</div>
-    </div>
+    <Container>
+      <Row className="photoCard">
+        <Col className="photoCard__goToBack mb-5">
+          <NavLink to="/gallery">Назад</NavLink>
+        </Col>
+        <Col
+          xs={12}
+          className="d-flex align-items-center justify-content-center mb-5 photoCard__title"
+        >
+          {selectedPhoto && selectedPhoto.title}
+        </Col>
+        <Col xs={12}>{`Album ID: ${selectedPhoto && selectedPhoto.albumId}`}</Col>
+        <Col xs={12} className="mb-3">{`Photo ID: ${
+          selectedPhoto && selectedPhoto.id
+        }`}</Col>
+        <Col xs={12} className="mb-3">
+          <img
+            className="photoCard__img"
+            src={selectedPhoto ? selectedPhoto.thumbnailUrl : ''}
+            alt=""
+          />
+        </Col>
+        <Col className="mb-2">
+          <a href={selectedPhoto ? selectedPhoto.url : ''}>
+            {selectedPhoto ? selectedPhoto.url : ''}
+          </a>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
