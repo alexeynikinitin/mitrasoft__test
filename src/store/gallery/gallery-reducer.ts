@@ -1,29 +1,9 @@
+import { categories } from 'constants/categories';
 import { GALLERY_ACTIONS_TYPES, MAGIC_NUMBERS } from 'store/gallery/enum';
 import { GalleryActionCreatorsType, GalleryStateType } from 'store/gallery/types';
 
 const initialGalleryState: GalleryStateType = {
-  categories: [
-    {
-      id: '0',
-      name: 'Category Name 1',
-      photos: null,
-    },
-    {
-      id: '1',
-      name: 'Category Name 2',
-      photos: null,
-    },
-    {
-      id: '2',
-      name: 'Category Name 3',
-      photos: null,
-    },
-    {
-      id: '3',
-      name: 'Category Name 4',
-      photos: null,
-    },
-  ],
+  categories,
   allCategoryPhoto: [],
 };
 

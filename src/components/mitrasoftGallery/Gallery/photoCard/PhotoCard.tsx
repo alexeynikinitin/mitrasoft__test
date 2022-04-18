@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 import { getPhoto } from 'store/selectedPhoto/actions';
 import { selectSelectedPhoto } from 'store/selectedPhoto/selectors';
@@ -17,6 +17,7 @@ export const PhotoCard: FC<PhotoCardType> = () => {
 
   return (
     <div>
+      <NavLink to="/gallery">Назад</NavLink>
       <div>{selectedPhoto && selectedPhoto.title}</div>
       <div>{selectedPhoto && selectedPhoto.albumId}</div>
       <div>{selectedPhoto && selectedPhoto.id}</div>

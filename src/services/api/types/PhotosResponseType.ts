@@ -1,3 +1,3 @@
-import { PhotoType } from 'store/gallery/types/PhotoType';
+import { PhotoType } from 'store/gallery/types';
 
 export type PhotosResponseType = PhotoType[];

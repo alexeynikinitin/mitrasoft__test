@@ -3,11 +3,11 @@ import React, { FC } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { NotFound } from 'components/commons/notFound/NotFound';
-import { AboutMe } from 'components/mitrasoftGallery/AboutMe/AboutMe';
-import { Gallery } from 'components/mitrasoftGallery/Gallery/Gallery';
-import { PhotoCard } from 'components/mitrasoftGallery/Gallery/photoCard/PhotoCard';
-import { Home } from 'components/mitrasoftGallery/Home/Home';
-import { routesPath } from 'constants/routes/routes';
+import { AboutMe } from 'components/mitrasoftGallery/aboutMe/AboutMe';
+import { Gallery } from 'components/mitrasoftGallery/gallery/Gallery';
+import { PhotoCard } from 'components/mitrasoftGallery/gallery/photoCard/PhotoCard';
+import { Home } from 'components/mitrasoftGallery/home/Home';
+import { routesPath } from 'constants/routes';
 
 export const MitrasoftGallery: FC<GalleryType> = () => (
   <div>
