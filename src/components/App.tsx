@@ -4,8 +4,10 @@ import { Footer } from 'components/commons/footer/Footer';
 import { Header } from 'components/commons/header/Header';
 import { MitrasoftGallery } from 'components/mitrasoftGallery/MitrasoftGallery';
 
+import './App.css';
+
 const App: FC<AppType> = () => (
-  <div className="App">
+  <div className="app">
     <Header />
     <MitrasoftGallery />
     <Footer />

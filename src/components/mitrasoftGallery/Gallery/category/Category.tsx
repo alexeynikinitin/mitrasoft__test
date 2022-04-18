@@ -1,13 +1,15 @@
 import React, { FC, memo, useEffect } from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { Row } from 'react-bootstrap';
 
+import { CategoryCard } from 'components/mitrasoftGallery/gallery/category/categoryCard/CategoryCard';
 import { setCategoryPhoto } from 'store/gallery/actions';
 import { CategoryStateType } from 'store/gallery/types';
 import { useAppDispatch } from 'utils/useAppDispatch';
+import './Category.css';
 
 export const Category: FC<CategoryType> = memo(({ categoryIndex, category }) => {
-  const { name, photos } = category;
+  const { photos } = category;
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -15,18 +17,17 @@ export const Category: FC<CategoryType> = memo(({ categoryIndex, category }) => 
   }, [photos]);
 
   return (
-    <div>
-      <div>{name}</div>
-      <div>
-        {photos &&
-          photos.map(photo => (
-            <NavLink key={photo.id} to={`/gallery/${photo.id}`}>
-              <img key={photo.id} src={photo.url} alt={photo.title} />
-            </NavLink>
-          ))}
-      </div>
-      <div>Подробнее</div>
-    </div>
+    <Row>
+      {photos &&
+        photos.map(photo => (
+          <CategoryCard
+            key={photo.id}
+            id={photo.id}
+            title={photo.title}
+            url={photo.url}
+          />
+        ))}
+    </Row>
   );
 });
 

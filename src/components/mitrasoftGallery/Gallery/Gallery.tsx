@@ -1,6 +1,8 @@
 import React, { FC, useEffect } from 'react';
 
-import { Category } from 'components/mitrasoftGallery/Gallery/category/Category';
+import { Accordion } from 'react-bootstrap';
+
+import { Category } from 'components/mitrasoftGallery/gallery/category/Category';
 import { getAllGalleryPhoto } from 'store/gallery/actions';
 import { selectCategories } from 'store/gallery/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
@@ -16,11 +18,16 @@ export const Gallery: FC<GalleryType> = () => {
   }, []);
 
   return (
-    <div>
+    <Accordion>
       {categories.map((category, index) => (
-        <Category key={category.id} category={category} categoryIndex={index} />
+        <Accordion.Item key={category.id} eventKey={JSON.stringify(index)}>
+          <Accordion.Header>{category.name}</Accordion.Header>
+          <Accordion.Body>
+            <Category category={category} categoryIndex={index} />
+          </Accordion.Body>
+        </Accordion.Item>
       ))}
-    </div>
+    </Accordion>
   );
 };
 

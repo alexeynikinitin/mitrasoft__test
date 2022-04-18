@@ -1,0 +1,22 @@
+.photoCategory {
+    position: relative;
+}
+
+.photoCategory:hover .photoCategory__button{
+    opacity: 1;
+    transition: .7s;
+    transform: scale(1.08) translateZ(0);
+}
+
+.photoCategory__img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #282c34;
+}
+
+.photoCategory__button {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    opacity: 0;
+}

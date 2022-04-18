@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import { Container, Row } from 'react-bootstrap';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { NotFound } from 'components/commons/notFound/NotFound';
@@ -9,17 +10,21 @@ import { PhotoCard } from 'components/mitrasoftGallery/gallery/photoCard/PhotoCa
 import { Home } from 'components/mitrasoftGallery/home/Home';
 import { routesPath } from 'constants/routes';
 
+import './MitrasoftGallery.css';
+
 export const MitrasoftGallery: FC<GalleryType> = () => (
-  <div>
-    <Routes>
-      <Route path={routesPath.home} element={<Home />} />
-      <Route path={routesPath.gallery} element={<Gallery />} />
-      <Route path={routesPath.photo} element={<PhotoCard />} />
-      <Route path={routesPath.aboutMe} element={<AboutMe />} />
-      <Route path={routesPath.notFound} element={<NotFound />} />
-      <Route path={routesPath.other} element={<Navigate to="/404" />} />
-    </Routes>
-  </div>
+  <Row className="mitrasoftGallery p-4 m-0">
+    <Container>
+      <Routes>
+        <Route path={routesPath.home} element={<Home />} />
+        <Route path={routesPath.gallery} element={<Gallery />} />
+        <Route path={routesPath.photo} element={<PhotoCard />} />
+        <Route path={routesPath.aboutMe} element={<AboutMe />} />
+        <Route path={routesPath.notFound} element={<NotFound />} />
+        <Route path={routesPath.other} element={<Navigate to="/404" />} />
+      </Routes>
+    </Container>
+  </Row>
 );
 
 type GalleryType = {};
