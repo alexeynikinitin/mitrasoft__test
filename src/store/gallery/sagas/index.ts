@@ -1,1 +1,0 @@
-export { fetchCategoryPhotos } from './fetchCategoryPhotos';

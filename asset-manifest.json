@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mitrasoft__test/static/css/main.78b984e7.css",
+    "main.js": "/mitrasoft__test/static/js/main.e45f99b5.js",
+    "static/media/cv.jpg": "/mitrasoft__test/static/media/cv.2659d7321eb07ecc6c07.jpg",
+    "static/media/photo.png": "/mitrasoft__test/static/media/photo.1e415d81cea756fd51d9.png",
+    "index.html": "/mitrasoft__test/index.html",
+    "main.78b984e7.css.map": "/mitrasoft__test/static/css/main.78b984e7.css.map",
+    "main.e45f99b5.js.map": "/mitrasoft__test/static/js/main.e45f99b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78b984e7.css",
+    "static/js/main.e45f99b5.js"
+  ]
+}

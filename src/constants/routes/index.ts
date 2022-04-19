@@ -1,1 +1,0 @@
-export { routesPath } from './routes';

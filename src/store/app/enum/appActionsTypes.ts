@@ -1,4 +1,0 @@
-export enum APP_ACTIONS_TYPES {
-  SET_IS_FETCHING = 'appReducer/SET_IS_FETCHING',
-  SET_ERROR_MESSAGE = 'appReducer/SET_ERROR_MESSAGE',
-}

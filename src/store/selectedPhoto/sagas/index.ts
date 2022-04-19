@@ -1,1 +1,0 @@
-export { fetchPhoto } from './fetchPhoto';
