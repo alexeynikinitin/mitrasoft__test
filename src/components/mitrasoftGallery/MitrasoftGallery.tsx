@@ -22,7 +22,7 @@ export const MitrasoftGallery = () => (
           <Route path={routesPath.photo} element={<PhotoCard />} />
           <Route path={routesPath.aboutMe} element={<AboutMe />} />
           <Route path={routesPath.notFound} element={<NotFound />} />
-          <Route path={routesPath.other} element={<Navigate to="/404" />} />
+          <Route path={routesPath.other} element={<Navigate to={routesPath.home} />} />
         </Routes>
       </Suspense>
     </Container>

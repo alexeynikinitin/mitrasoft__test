@@ -16,6 +16,7 @@ export const Header = () => {
 
   const openMenuHandle = () => setIsVisible(true);
   const closeMenuHandle = () => setIsVisible(false);
+  const clickNavLinkHandle = () => setIsVisible(false);
 
   const fullClassMenuNav = `main_menu ${
     isVisible ? 'main_menu_open' : 'main_menu_close'
@@ -46,18 +47,24 @@ export const Header = () => {
             </Col>
           </Row>
           <Row className="nav_link">
-            <NavLink className={({ isActive }) => (isActive ? 'active_link' : '')} to="/">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'active_link' : '')}
+              to="/"
+              onClick={clickNavLinkHandle}
+            >
               Home
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? 'active_link' : '')}
               to="/gallery"
+              onClick={clickNavLinkHandle}
             >
               Gallery
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? 'active_link' : '')}
               to="/aboutMe"
+              onClick={clickNavLinkHandle}
             >
               About Me
             </NavLink>
