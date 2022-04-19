@@ -1,7 +1,7 @@
 import { APP_ACTIONS_TYPES } from 'store/app/enum/appActionsTypes';
 
-export const setIsInitialize = (isInitialized: boolean) =>
+export const setIsFetching = (isInitialized: boolean) =>
   ({
-    type: APP_ACTIONS_TYPES.SET_IS_INITIALIZE,
+    type: APP_ACTIONS_TYPES.SET_IS_FETCHING,
     payload: { isInitialized },
   } as const);

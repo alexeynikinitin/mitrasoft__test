@@ -1,3 +1,4 @@
 export type AppStateType = {
-  isInitialized: boolean;
+  isFetching: boolean;
+  errorMessage: string;
 };

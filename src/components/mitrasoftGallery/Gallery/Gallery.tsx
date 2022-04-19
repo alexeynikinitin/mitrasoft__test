@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { Accordion } from 'react-bootstrap';
 
@@ -8,9 +8,8 @@ import { selectCategories } from 'store/gallery/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
 import { useAppSelector } from 'utils/useAppSelector';
 
-export const Gallery: FC<GalleryType> = () => {
+export const Gallery = () => {
   const categories = useAppSelector(selectCategories);
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -30,5 +29,3 @@ export const Gallery: FC<GalleryType> = () => {
     </Accordion>
   );
 };
-
-type GalleryType = {};

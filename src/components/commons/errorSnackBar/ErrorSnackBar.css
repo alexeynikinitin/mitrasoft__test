@@ -1,0 +1,5 @@
+.error_snackBar {
+    position: absolute;
+    top: 75%;
+    left: calc(50% - 153px);
+}

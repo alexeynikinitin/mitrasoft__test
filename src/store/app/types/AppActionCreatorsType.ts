@@ -1,3 +1,5 @@
-import { setIsInitialize } from 'store/app/actions/setIsInitialize';
+import { setErrorMessage, setIsFetching } from 'store/app/actions';
 
-export type AppActionCreatorsType = ReturnType<typeof setIsInitialize>;
+export type AppActionCreatorsType =
+  | ReturnType<typeof setIsFetching>
+  | ReturnType<typeof setErrorMessage>;

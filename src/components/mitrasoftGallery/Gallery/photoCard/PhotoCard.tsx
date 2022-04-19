@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import { NavLink, useParams } from 'react-router-dom';
@@ -9,10 +9,11 @@ import { useAppDispatch } from 'utils/useAppDispatch';
 import { useAppSelector } from 'utils/useAppSelector';
 import './PhotoCard.css';
 
-export const PhotoCard: FC<PhotoCardType> = () => {
+export const PhotoCard = () => {
   const { photoId } = useParams<string>();
   const selectedPhoto = useAppSelector(selectSelectedPhoto);
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     dispatch(getPhoto(photoId || null));
   }, [photoId]);
@@ -49,5 +50,3 @@ export const PhotoCard: FC<PhotoCardType> = () => {
     </Container>
   );
 };
-
-type PhotoCardType = {};

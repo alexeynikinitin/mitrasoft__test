@@ -3,7 +3,8 @@ import { AppActionCreatorsType } from 'store/app/types/AppActionCreatorsType';
 import { AppStateType } from 'store/app/types/AppStateType';
 
 const initialAuthState: AppStateType = {
-  isInitialized: false,
+  isFetching: false,
+  errorMessage: '',
 };
 
 export const appReducer = (
@@ -11,7 +12,8 @@ export const appReducer = (
   action: AppActionCreatorsType,
 ): AppStateType => {
   switch (action.type) {
-    case APP_ACTIONS_TYPES.SET_IS_INITIALIZE:
+    case APP_ACTIONS_TYPES.SET_IS_FETCHING:
+    case APP_ACTIONS_TYPES.SET_ERROR_MESSAGE:
       return {
         ...state,
         ...action.payload,
