@@ -1,3 +1,0 @@
-export enum MAGIC_NUMBERS {
-  FIRST_INDEX_PHOTOS = 0,
-}

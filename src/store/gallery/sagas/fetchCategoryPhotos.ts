@@ -1,9 +1,9 @@
-import { call, put } from 'redux-saga/effects';
+import { call, delay, put } from 'redux-saga/effects';
 
+import { MAGIC_NUMBERS } from 'constants/enums';
 import { gallery } from 'services/api';
 import { setErrorMessage, setIsFetching } from 'store/app/actions';
 import { setAllGalleryPhoto } from 'store/gallery/actions';
-import { MAGIC_NUMBERS } from 'store/gallery/enum';
 import { PhotoType } from 'store/gallery/types';
 
 export function* fetchCategoryPhotos() {
@@ -19,6 +19,7 @@ export function* fetchCategoryPhotos() {
   } catch (e: any) {
     yield put(setErrorMessage(e.message));
   } finally {
+    yield delay(MAGIC_NUMBERS.DELAY);
     yield put(setIsFetching(false));
   }
 }

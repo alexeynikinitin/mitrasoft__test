@@ -1,5 +1,6 @@
 import { categories } from 'constants/categories';
-import { GALLERY_ACTIONS_TYPES, MAGIC_NUMBERS } from 'store/gallery/enum';
+import { MAGIC_NUMBERS } from 'constants/enums';
+import { GALLERY_ACTIONS_TYPES } from 'store/gallery/enum';
 import { GalleryActionCreatorsType, GalleryStateType } from 'store/gallery/types';
 
 const initialGalleryState: GalleryStateType = {

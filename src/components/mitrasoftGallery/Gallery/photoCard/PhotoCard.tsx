@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import { NavLink, useParams } from 'react-router-dom';
 
+import { selectIsFetching } from 'store/app/selectors/selectIsFetching';
 import { getPhoto } from 'store/selectedPhoto/actions';
 import { selectSelectedPhoto } from 'store/selectedPhoto/selectors';
 import { useAppDispatch } from 'utils/useAppDispatch';
@@ -12,12 +13,16 @@ import './PhotoCard.css';
 export const PhotoCard = () => {
   const { photoId } = useParams<string>();
   const selectedPhoto = useAppSelector(selectSelectedPhoto);
+  const isFetching = useAppSelector(selectIsFetching);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(getPhoto(photoId || null));
   }, [photoId]);
 
+  if (isFetching) {
+    return <Spinner animation="border" variant="primary" className="spinner" />;
+  }
   return (
     <Container>
       <Row className="photoCard">
