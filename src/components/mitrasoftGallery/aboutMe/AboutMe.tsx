@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import { Col, Row } from 'react-bootstrap';
 
 // @ts-ignore
 import cv from '../../../assets/aboutMe/cv.jpg';
 
-export const AboutMe: FC<AboutMeType> = () => (
+export const AboutMe = () => (
   <Row>
     <Col>
       <img
@@ -13,10 +13,8 @@ export const AboutMe: FC<AboutMeType> = () => (
           width: '100%',
         }}
         src={cv}
-        alt=""
+        alt="cv"
       />
     </Col>
   </Row>
 );
-
-type AboutMeType = {};

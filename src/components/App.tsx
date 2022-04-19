@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import { Footer } from 'components/commons/footer/Footer';
 import { Header } from 'components/commons/header/Header';
@@ -6,7 +6,7 @@ import { MitrasoftGallery } from 'components/mitrasoftGallery/MitrasoftGallery';
 
 import './App.css';
 
-const App: FC<AppType> = () => (
+const App = () => (
   <div className="app">
     <Header />
     <MitrasoftGallery />
@@ -15,5 +15,3 @@ const App: FC<AppType> = () => (
 );
 
 export default App;
-
-type AppType = {};

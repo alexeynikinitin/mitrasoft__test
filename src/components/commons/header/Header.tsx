@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Col, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
@@ -11,7 +11,7 @@ import hamburger from '../../../assets/burger-menu/hamburger.png';
 import photo from '../../../assets/burger-menu/photo.png';
 import './Header.css';
 
-export const Header: FC<HeaderType> = () => {
+export const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const openMenuHandle = () => setIsVisible(true);
@@ -77,5 +77,3 @@ export const Header: FC<HeaderType> = () => {
     </Row>
   );
 };
-
-type HeaderType = {};

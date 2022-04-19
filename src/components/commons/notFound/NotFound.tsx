@@ -1,5 +1,3 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-export const NotFound: FC<NotFoundType> = () => <div>NOT FOUND</div>;
-
-type NotFoundType = {};
+export const NotFound = () => <div>NOT FOUND</div>;

@@ -52,15 +52,6 @@
         "ignoreNumericLiteralTypes": true
       }
     ],
-    //    "@typescript-eslint/no-use-before-define": [
-    //      "error"
-    //    ],
-    //    "@typescript-eslint/explicit-function-return-type": [
-    //      "error",
-    //      {
-    //        "allowExpressions": true
-    //      }
-    //    ],
     "prettier/prettier": "error",
     "react/prop-types": 0,
     "react/display-name": "off",
